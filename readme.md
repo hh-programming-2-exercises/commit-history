@@ -1,35 +1,30 @@
-> [!NOTE]  
-> The English translation for this exercise can be found in [this file](./readme.en.md).
+# Commit history
 
-# Soveltava tehtävä: "Commit History"
+This final course assignment repository contains various exercises designed to deepen and apply the topics from previous weeks. You have more freedom in solving these exercises, so you can approach them in many different ways.
 
-Tämä kurssin viimeinen tehtävärepositorio sisältää erilaisia harjoitteita, joiden avulla syvennetään ja sovelletaan aikaisempien viikkojen aiheita. Tehtävien ratkaisemiseksi on annettu enemmän vapauksia, joten voitkin ratkaista ne monilla eri tavoilla.
+We recommend considering whether creating separate classes, stream operations, or even a map data structure might help in solving different problems.
 
-Suosittelemmekin pohtimaan, olisiko erillisten luokkien luominen, stream-operaatiot tai vaikka map-tietorakenne avuksi eri ongelmien ratkaisemisessa.
+## Testing the assignment
 
+This assignment includes ready-made tests to ensure the functionality of your solutions. The ready-made tests ensure that the end result of your code is correct. Since the freedom in solving the exercises is greater than before, you will likely need various helper methods and classes. To ensure their functionality, we recommend writing your own tests as well. Alternatively, you can write your own main methods to examine the functionality of your code.
 
-## Tehtävien testaaminen
+Familiarizing yourself with the tests is not necessary to complete the exercise, but running the tests is highly recommended to get feedback on the functionality of your solutions.
 
-Tämä tehtäväpaketti sisältää valmiita testejä ratkaisujesi toimivuuden varmistamiseksi. Valmiit testit varmistavat, että koodisi lopputulos on oikea. Koska vapaudet tehtävän ratkaisujen suhteen ovat aiempaa vapaammat, tulet todennäköisesti tarvitsemaan erilaisia apumetodeja ja -luokkia, joiden toimivuuden varmistamiseksi suosittelemme kirjoittamaan lisäksi omia testejä. Vaihtoehtoisesti voit kirjoittaa omia main-metodeja, joiden avulla tutkit koodisi toimivuutta.
+You can run the unit tests as usual with your code editor's testing tool or with the Gradle automation tool.
 
-Testeihin perehtyminen ei ole tehtävän suorittamiseksi välttämätöntä, mutta testien suorittaminen on ehdottomasti suositeltua, jotta saat palautetta tekemiesi ratkaisujen toimivuudesta.
+> [!IMPORTANT]
+> Changing the names, parameters, or return values of the methods and classes specified in the assignment is not allowed, but we **recommend** that you implement your own classes and methods in addition to them.
 
-Voit suorittaa yksikkötestit tuttuun tapaan koodieditorisi testaustyökalulla tai Gradle-automaatiotyökalulla.
+> [!IMPORTANT]
+> You may write additional tests if you wish, but do not modify or delete the pre-written tests.
 
-> [!NOTE]
-> Tehtävänannossa määritettyjen metodien ja luokkien nimien, parametrien tai paluuarvojen muuttaminen ei ole sallittua, mutta **suosittelemme** että toteutat niiden lisäksi omia luokkia ja metodeita.
->
-> Saat kirjoittaa halutessasi lisää testejä, mutta älä muuta tai poista valmiiksi kirjoitettuja testejä.
+## Submitting the assignment
 
+Submit the assignment using Git's `add`, `commit`, and `push` commands as you have done with previous exercises. You can submit your solution for evaluation as many times as needed until the exercise deadline. However, ensure that your latest submission yields the best scores, as only the most recent scores will be considered.
 
-## Tehtävän palauttaminen
+## Git change log
 
-Palauta tehtävä Gitin `add`-, `commit`- ja `push`-komennoilla edellisten tehtävien tavoin. Voit lähettää ratkaisusi arvioitavaksi niin monta kertaa kuin on tarpeen tehtävän määräaikaan asti. Varmista kuitenkin, että viimeisin suoritus tuottaa parhaat pisteet, koska vain viimeisimmät pisteet jäävät voimaan.
-
-
-## Gitin muutoslogi
-
-Kuten olet kurssilla tähän mennessä oppinut, Git pitää kirjaa repositoriossa tapahtuvista muutoksista committien avulla. Kullakin commitilla on tekijä, id, viesti, sekä "parent", joka osoittaa aina edeltävään committiin. Yksi tapa esittää projektin historiaa tekstimuodossa voisikin olla seuraava esitystapa:
+As you have learned in the course so far, Git keeps track of changes in the repository using commits. Each commit has an author, id, message, and a "parent" that always points to the previous commit. One way to represent the project's history in text form could be the following format:
 
 ```
 Commit 7b9f1e by NewbieNate (Parent: None)
@@ -69,9 +64,9 @@ Merge branch 'refactor' into master
 Merging the refactor changes. Thanks for the help, team! Learning and growing together.
 ```
 
-Tässä tehtävässä käsiteltävä data koostuu monirivisistä merkkijonoista, jotka esittävät kuvitteellisten projektien muutoshistoriaa yllä esitetyssä muodossa. Laajempi esimerkki löytyy erillisestä tiedostosta [commit-log-example.txt](./commit-log-example.txt).
+In this exercise, the data consists of multi-line strings that represent the change history of fictional projects in the format described above. A more extensive example can be found in a separate file [commit-log-example.txt](./commit-log-example.txt).
 
-Esimerkiksi `ohjelmointi2`-nimisen käyttäjän yksittäinen commit, jonka id on `d4e5f6`, voisi näyttää seuraavalta:
+For example, a single commit by a user named `ohjelmointi2` with the id `d4e5f6` might look like this:
 
 ```java
 """
@@ -81,9 +76,9 @@ The message is two lines long...
 """
 ```
 
-Huomaa, että ensimmäisen commitin "Parent" on `"None"`. Kaikki muut commit id:t on esitetty tehtävässä kuuden merkin pituisina [aakkosnumeerisinä](https://fi.wiktionary.org/wiki/aakkosnumeerinen) merkkijonoina. "Commit messagen" pituus voi vaihdella, siihen voi kuulua yksi tai useampia rivejä, ja siinä saattaa olla mitä tahansa erikoismerkkejä, mukaan lukien emoji-merkkejä.
+Note that the "Parent" of the first commit is `"None"`. All other commit ids are presented in the exercise as six-character [alphanumeric](https://en.wikipedia.org/wiki/Alphanumericals) strings. The length of the "Commit message" can vary, it can include one or more lines, and it may contain any special characters, including emoji.
 
-Git-repositorioiden versiohistoriaa esitetään usein myös graafisessa muodossa, jossa samat commitit voitaisiin esittää esimerkiksi seuraavasti:
+The version history of Git repositories is often also presented in graphical form, where the same commits could be represented, for example, as follows:
 
 ```mermaid
 gitGraph
@@ -100,39 +95,36 @@ gitGraph
 ```
 
 > [!IMPORTANT]
-> Vaikka tässä tehtävässä esimerkkinä on Gitin historian käsitteleminen, **sinun ei tarvitse käyttää yhtään uusia Git-komentoja**. Kaikki tehtävän logiikka toteutetaan käyttäen Javan merkkijonoja, metodeja ja luokkia.
+> Although this task uses Git history as an example, **you do not need to use any new Git commands**. All task logic is implemented using Java strings, methods, and classes.
 > 
-> Tyypillisesti isommassa projektissa on samanaikaisesti useampia kehityshaaroja, jolloin historia näyttää myös monimutkaisemmalta. Tällä kurssilla käytämme ainoastaan yhtä pääkehityshaaraa, joka on nimeltään `master` tai `main`.
+> Typically, in a larger project, there are multiple development branches simultaneously, making the history appear more complex. In this course, we will use only one main development branch, named `master` or `main`.
 
+## Part 0: solution design *(preparation)*
 
-## Osa 0: ratkaisun suunnittelu *(valmistelut)*
+Unlike previous task repositories, it might not be advisable to complete this task one step at a time. Instead, you should familiarize yourself with the entire task in advance and plan how to implement reusable solutions that will help solve all parts of the task.
 
-Aikaisemmista tehtävärepositorioista poiketen tätä tehtävää ei kannata välttämättä tehdä yksi vaihe kerrallaan, vaan sinun kannattaa perehtyä etukäteen kokonaisuuteen ja suunnitella, miten toteutat uudelleenkäytettäviä ratkaisuja, jotka edesauttavat tehtävän kaikkien osien ratkaisemista.
+For example, creating a new `Commit` class might seem like "extra work" at first, but it can be beneficial in the long run. You can also further develop various helper classes as you progress with the task, according to your own judgment.
 
-Esimerkiksi uuden `Commit`-luokan luominen voi tuntua alussa "ylimääräiseltä työltä", mutta se voi olla pidemmän päälle kannattavaa. Voit myös jatkokehittää erilaisia apuluokkia tehtävää edistäessäsi oman harkintasi mukaan.
+## Part 1: commit ids *(applying, 20 %)*
 
+The [`CommitIds`](./src/main/java/part01/CommitIds.java) class has a method named `getCommitIds`. This method takes a multi-line string as a parameter, which contains the Git log of the fictional project in the format described above.
 
-## Osa 1: Commit ids *(soveltava, 20 %)*
+Complete the class with a solution that processes the string and returns the ids of the commits present in it. You can find a more detailed description of the method's functionality in the method comments.
 
-[`CommitIds`](./src/main/java/part01/CommitIds.java)-luokassa on metodi nimeltä `getCommitIds`. Tämä metodi saa parametrinaan monirivisen merkkijonon, joka sisältää edellä kuvitteellisen projektin Git-login ylempänä esitetyssä muodossa.
-
-Täydennä luokkaan ratkaisu, joka käsittelee merkkijonoa ja palauttaa siinä esiintyvien committien id:t. Tarkemman kuvauksen metodin toiminnasta löydät metodin kommenteista.
-
-Tehtävän tämä osa testataan [`CommitIdsTest`-testiluokalla](./src/test/java/part01/CommitIdsTest.java), jonka voit suorittaa joko koodieditorisi testaustyökalulla tai Gradlella:
+This part of the task is tested with the [`CommitIdsTest`](./src/test/java/part01/CommitIdsTest.java) test class, which you can run either with your code editor's testing tool or with Gradle:
 
 ```
 ./gradlew test --tests CommitIdsTest        # unix
 .\gradlew.bat test --tests CommitIdsTest    # windows
 ```
 
+## Part 2: Contributors and statistics *(advanced, 20 % + 20 %)*
 
-## Osa 2: Contributors and statistics *(edistynyt, 20 % + 20 %)*
+The [`Contributors`](./src/main/java/part02/Contributors.java) class has methods named `getContributors` and `groupCommitIdsByContributors`. Like in the previous part, these methods also take a multi-line string as a parameter, which contains the Git log of the fictional project in the format described above.
 
-[`Contributors`](./src/main/java/part02/Contributors.java)-luokassa on metodit nimeltä `getContributors` sekä `groupCommitIdsByContributors`. Kuten edellisessä osassa, myös nämä metodit saavat parametrinaan monirivisen merkkijonon, joka sisältää edellä kuvitteellisen projektin Git-login ylempänä esitetyssä muodossa.
+Complete the class with solutions that fulfill the functionalities mentioned in the method comments.
 
-Täydennä luokkaan ratkaisut, jotka täyttävät näiden metodien kommenteissa mainitut toiminnallisuudet.
-
-Tehtävän tämä osa testataan kahdella erillisellä testiluokalla: [`GetContributorsTest`](./src/test/java/part02/GetContributorsTest.java) ja [`GroupCommitIdsTest`](./src/test/java/part02/GroupCommitIdsTest.java). Voit suorittaa testit joko koodieditorisi testaustyökalulla tai Gradlella:
+This part of the task is tested with two separate test classes: [`GetContributorsTest`](./src/test/java/part02/GetContributorsTest.java) and [`GroupCommitIdsTest`](./src/test/java/part02/GroupCommitIdsTest.java). You can run the tests either with your code editor's testing tool or with Gradle:
 
 ```
 # unix
@@ -144,28 +136,27 @@ Tehtävän tämä osa testataan kahdella erillisellä testiluokalla: [`GetContri
 .\gradlew.bat test --tests GroupCommitIdsTest
 ```
 
+## Part 3: reading, organizing, and printing the log file *(advanced, 40 %)*
 
-## Osa 3: Logitiedoston lukeminen, järjestäminen ja tulostaminen *(edistynyt, 40 %)*
+In the final part of the task, you will handle a "commit log" file [pizza-commits.txt](./pizza-commits.txt), where the **commits are out of order**. Each commit in the log file contains information about its preceding "Parent" commit, which you will use to print the commits in chronological order.
 
-Tehtävän viimeisessä osassa käsiteltävänäsi on "commit log"-tiedosto [pizza-commits.txt](./pizza-commits.txt), jonka sisältämät **commitit ovat epäjärjestyksessä**. Lokitiedoston jokaisessa commitissa on tieto sitä edeltävästä "Parent"-commitista, joiden avulla sinun tulee tulostaa commitit kronologisessa järjestyksessä.
+Your program execution should start from the Java class [part03.Main](./src/main/java/part03/Main.java) provided in the task template. In addition to the `main` method, you are free to implement any helper methods and classes as you see fit. We encourage you to write your own tests to ensure the functionality of different parts of your program.
 
-Ohjelmasi suorituksen tulee käynnistyä tehtäväpohjassa valmiina olevasta Java-luokasta [part03.Main](./src/main/java/part03/Main.java). `main`-metodin lisäksi saat toteuttaa haluamasi apumetodit ja -luokat vapaasti. Kannustamme kirjoittamaan myös omia testejä ohjelmasi eri osien toimivuuden varmistamiseksi.
+You have the freedom to implement the internal logic of the program in the way you deem best, as long as it meets the following functionalities:
 
-Sinulla on vapaat kädet toteuttaa ohjelman sisäinen logiikka parhaaksi katsomallasi tavalla, kunhan se täyttää seuraavat toiminnallisuudet:
+* Your program should not ask the user for inputs or print texts unrelated to the task description.
+* Your program should read the commit history from the file named [pizza-commits.txt](./pizza-commits.txt) provided in the task template. The file content follows the same format as previous tasks.
+* Your program should print the commits read from the file in order, starting with the commit whose "Parent" is "None". Subsequent commits should always follow their respective "Parent" commits.
+* You must not modify the given text file; your program should work with the original file.
 
-* Ohjelmasi ei saa kysyä käyttäjältä syötteitä eikä tulostaa tehtävänantoon kuulumattomia tekstejä.
-* Ohjelmasi tulee lukea commit-historia tehtäväpohjan tiedostosta nimeltä [pizza-commits.txt](./pizza-commits.txt). Tiedoston sisältö noudattaa samaa formaattia kuin aikaisemmat tehtävät.
-* Ohjelmasi tulee tulostaa tiedostosta luetut commitit järjestyksessä siten, että commit, jonka "Parent" on "None", esitetään ensimmäisenä. Seuraavien committien tulee aina seurata omaa "Parent"-committiaan.
-* Et saa muokata annettua tekstitiedostoa, vaan ohjelmasi on toimittava alkuperäisellä tiedostolla.
-
-Voit suorittaa main-luokan joko koodieditorisi käyttöliittymässä tai Gradlen avulla:
+You can run the main class either through your code editor's interface or using Gradle:
 
 ```
 ./gradlew run       # unix
 .\gradlew.bat run   # windows
 ```
 
-Tehtävä tarkastetaan [`PizzaCommitsTest`-yksikkötestiluokalla](./src/test/java/part03/PizzaCommitsTest.java), jonka voit suorittaa koodieditorillasi tai Gradlella:
+The task is checked with the [`PizzaCommitsTest`](./src/test/java/part03/PizzaCommitsTest.java) unit test class, which you can run with your code editor or Gradle:
 
 ```
 ./gradlew test --tests PizzaCommitsTest        # unix
@@ -173,17 +164,16 @@ Tehtävä tarkastetaan [`PizzaCommitsTest`-yksikkötestiluokalla](./src/test/jav
 ```
 
 > [!NOTE]
-> Huomaa, että vaikka tehtävässä lajitellaan committeja, ei sitä välttämättä voi ratkaista ainakaan pelkän lajittelualgoritmin avulla. Tämä johtuu siitä, että kahta committia vertaillessa et voi tietää, kumpi tulee ensin, elleivät ne eivät ole toistensa "parent" ja "child". Sinun täytyy siis soveltaa jotain muuta menetelmää.
+> Note that although the task involves sorting commits, it may not be solvable using just a sorting algorithm. This is because when comparing two commits, you cannot know which one comes first unless they are "parent" and "child" to each other. Therefore, you will need to apply some other method.
 >
-> Kaikki projektin tiedostot on tallennettu UTF-8 -merkistöllä, joten jos kohtaat ongelmia merkistöjen kanssa, varmista että sekä koodissa että editorissasi on oikea merkistö. Windows-käyttäjät voivat määritellä Eclipsen merkistökoodauksen [tämän kuvan mukaisesti](https://ohjelmointi2.github.io/img/eclipse-workspace-encoding.jpg).
+> All project files are saved with UTF-8 encoding, so if you encounter character encoding issues, ensure that both your code and editor are set to the correct encoding. Windows users can set the encoding in Eclipse as shown in [this image](https://ohjelmointi2.github.io/img/eclipse-workspace-encoding.jpg).
 >
-> Tiedostojen lukemisessa sinua auttavat esimerkiksi Javan [File](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Files.html)- ja [Path](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html)-luokat. Esimerkki näiden käyttämisestä löytyy valmiina `main`-metodin pohjasta.
+> For reading files, Java's [File](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Files.html) and (https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html) classes can be helpful. An example of using these can be found in the `main` method template.
 
+## License and authors
 
-## Lisenssi ja tekijät
+This exercise is made by Teemu Havulinna and translated to English by Kalle Ilves and it is licensed under a [Creative Commons BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The commit log files used in the task were created with the help of ChatGPT 3.5.
 
-Tehtävässä esiintyvät commit log -tiedostot on luotu käyttäen apuna ChatGPT 3.5:ttä.
-
-Tehtävänannon sekä lähdekoodien toteutuksessa on hyödynnetty ChatGPT 3.5:ttä sekä GitHub copilot -tekoälyavustinta.
+ChatGPT 3.5 language model and GitHub copilot AI assistant has been used to implement the exercise.

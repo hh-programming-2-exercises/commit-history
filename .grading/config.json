@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "CommitIdsTest",
+      "run": "./gradlew test --tests CommitIdsTest --console=plain",
+      "points": 20
+    },
+    {
+      "name": "GetContributorsTest",
+      "run": "./gradlew test --tests GetContributorsTest --console=plain",
+      "points": 20
+    },
+    {
+      "name": "GroupCommitIdsTest",
+      "run": "./gradlew test --tests GroupCommitIdsTest --console=plain",
+      "points": 20
+    },
+    {
+      "name": "PizzaCommitsTest",
+      "run": "./gradlew test --tests PizzaCommitsTest --console=plain",
+      "points": 40
+    }
+  ]
+}
